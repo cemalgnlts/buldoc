@@ -1,0 +1,26 @@
+{
+  "name": "buldoc",
+  "version": "1.0.0",
+  "description": "Bulma style document generator",
+  "main": "bin/buldoc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cemalgnlts/buldoc.git"
+  },
+  "keywords": [
+    "documnet",
+    "bulma"
+  ],
+  "author": "Cemal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cemalgnlts/buldoc/issues"
+  },
+  "homepage": "https://github.com/cemalgnlts/buldoc#readme",
+  "dependencies": {
+    "showdown": "^1.9.1"
+  }
+}

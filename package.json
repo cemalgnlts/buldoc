@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Bulma style document generator",
   "main": "bin/buldoc.js",
+  "bin": {
+    "buldoc": "./bin/buldoc.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

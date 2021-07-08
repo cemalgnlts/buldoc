@@ -15,6 +15,11 @@ if (fun === "new") {
         console.error("Please write folder name: buldoc new foldername");
         return;
     }
+    
+    if (!isFolderAccessible(projectDir)) {
+        console.error("The directory you are in is not readable or writable!");
+        return;
+    }
 
     createProject(path.join(cwd, args[1]));
 } else if (fun === "build") {
@@ -41,10 +46,6 @@ if (fun === "new") {
 }
 
 function createProject(projectDir) {
-    if (!isFolderAccessible(projectDir)) {
-        console.error("The directory you are in is not readable or writable!");
-        return;
-    }
     if (fs.existsSync(projectDir)) {
         console.error("This folder already exists!");
         return;

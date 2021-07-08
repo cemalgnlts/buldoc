@@ -1,4 +1,5 @@
 const showdown = require("showdown");
+const fs = require("fs");
 
 const template = fs.readFileSync(
     path.join(__dirname, "template.html"),

@@ -16,7 +16,7 @@ if (fun === "new") {
         return;
     }
     
-    if (!isFolderAccessible(projectDir)) {
+    if (!isFolderAccessible(cwd)) {
         console.error("The directory you are in is not readable or writable!");
         return;
     }

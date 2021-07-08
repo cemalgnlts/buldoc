@@ -1,5 +1,10 @@
 const showdown = require("showdown");
 
+const template = fs.readFileSync(
+    path.join(__dirname, "template.html"),
+    "utf-8"
+);
+
 const options = {};
 
 showdown.setFlavor("github");
@@ -10,6 +15,6 @@ const converter = new showdown.Converter({
 
 module.exports = {
     parse(text) {
-        return converter.makeHtml(text);
+        return template.replace("%CONTENT%", converter.makeHtml(text));
     }
 }

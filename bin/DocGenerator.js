@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const parser = require("./parser");
 
+let template = parser.getTemplate(path.join(__dirname, "template.html"));
+
 function render(workingDir) {
     console.log("\u29d7 Rendering...");
     console.time("renderTime");
@@ -37,7 +39,7 @@ function eachFolder(docsFolder, outputFolder) {
 
 function mdToHtml(fileDir, fileName, outputDir) {
     const content = fs.readFileSync(fileDir, "utf-8");
-    const data = parser.parse(content);
+    const data = parser.parse(content, template);
     const newFileName = fileName.replace(/\.md$/, ".html");
     const dir = path.join(outputDir, newFileName);
     fs.writeFileSync(dir, data);
